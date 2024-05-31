@@ -1,0 +1,16 @@
+And this is exactly what Hystrix does. Hystrix is a
+latency and fault tolerance library designed to isolate points of
+
+access to remote systems, services and 3rd party libraries, stop cascading failure
+and enable resilience in complex distributed systems where failure is inevitable.
+
+In a distributed architecture like microservices,
+one service may require to use other services as dependencies to accomplish
+his work. Every point in an application that reaches out over the network or into a
+client library that can potentially result in network requests is a source of failure. Worse
+than failures, these applications can also result in increased latencies between services. And
+this leaves us to another big problem, suppose you are developing a service on a Tomcat which will
+open two connections to two services, if one of this service takes more time than expected to send
+back a response, you will be spending one thread of Tomcat pool doing nothing
+rather than waiting an answer. If you don’t have a high traffic site this may be acceptable, but if you have
+a considerable amount of traffic all resources may become saturated and and block the whole server.

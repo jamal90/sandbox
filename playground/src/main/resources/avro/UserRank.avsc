@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "namespace": "parquet.org.jam",
+  "name": "UserRank",
+  "fields": [
+    { "name": "userId", "type": "int" },
+    { "name": "rank", "type": "int" }
+  ]
+}

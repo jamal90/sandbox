@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package org.jam.protobuf;
+
+option java_multiple_files = true;
+option java_package = "org.jam.protobuf";
+
+
+message Nested {
+  message Inner {
+    string prop_one = 1;
+    string prop_two = 2;
+  }
+
+  Inner inner = 1;
+  string outer_string = 2;
+  repeated Inner repeated_inner = 3;
+}

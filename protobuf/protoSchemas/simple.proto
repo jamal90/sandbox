@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message MotorType {
+  string objectId = 1;
+  string objectType = 2;
+  string _path = 3;  
+}

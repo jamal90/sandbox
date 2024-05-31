@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.jam.protobuf";
+option java_outer_classname="SimpleProtos";
+
+message Simple {
+  string name = 1;
+}

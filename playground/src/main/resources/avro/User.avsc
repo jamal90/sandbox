@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "namespace": "parquet.org.jam",
+  "name": "User",
+  "fields": [
+    { "name": "userId", "type": "int" },
+    { "name": "name", "type": "string" },
+    { "name":  "homeAddress",
+      "type": {
+        "type":  "record",
+        "name": "AddressRecord",
+        "fields": [
+          { "name":  "number", "type":  "int"},
+          { "name":  "street", "type":  "string"}
+        ]
+      }
+    }
+  ]
+}

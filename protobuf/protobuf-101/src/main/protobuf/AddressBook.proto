@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "org.jam.protobuf";
+option java_outer_classname = "AddressBookProtos";
+option java_multiple_files = true;
+
+message Person {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+    repeated string numbers = 4;
+}
+
+message AddressBook {
+    repeated Person people = 1;
+}

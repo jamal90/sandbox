@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_outer_classname = "RobotSystemTypeProtos";
+option java_package = "org.jam.protobuf.iot";
+
+message RobotSystemType {
+  string object_id = 1;
+  string object_type = 3;
+
+  message GearType {
+    double gearRatio = 1;
+    double pitch = 2;
+  }
+
+  message MotorType {
+    double breakReleased = 1;
+    double motorTemperature = 2;
+    double effectiveLoadRate = 3;
+  }
+
+  message Measurement {
+    string _path = 1;
+    int64 _time = 2;
+    oneof indicators {
+      GearType gearType = 3;
+      MotorType motorType = 4;
+    }
+  }
+
+  repeated Measurement measurements = 4;
+}

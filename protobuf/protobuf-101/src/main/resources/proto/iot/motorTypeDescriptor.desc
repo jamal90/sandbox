@@ -1,0 +1,13 @@
+
+Ž
+MotorType.proto"ò
+	MotorType
+	object_id (	RobjectId
+object_type (	R
+objectType:
+measurements (2.MotorType.MeasurementRmeasurementsk
+Measurement
+_time (RTime
+_path (	RPath
+	GearRatio (R	GearRatio
+Pitch (RPitchbproto3

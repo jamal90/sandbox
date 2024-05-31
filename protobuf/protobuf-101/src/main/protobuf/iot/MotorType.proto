@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message MotorType {
+  string object_id = 1;
+  string object_type = 2; 
+  
+  message Measurement {
+    int64 _time = 1;
+    string _path = 2;
+
+    double GearRatio = 3;
+    double Pitch = 4;
+  }
+
+  repeated Measurement measurements = 3;
+}
